@@ -1,0 +1,73 @@
+### register
+POST  http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "sellererer",
+    "password": "sdttttfsdf",
+    "role": "seller"
+}
+
+### login
+POST  http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "sellererer",
+    "password": "sdttttfsdf"
+}
+
+### update user
+PUT http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzMjllOTBhNTk2MGMxOWI1ZDUwZWUiLCJ1c2VybmFtZSI6Impzb29uIiwicGFzc3dvcmQiOiIkMmIkMTAkbHk1cDdaaDRYTFd4dE5kWmdPT1lnLlFqNEYxLmxiYWxzSmVnRm9aUnlZZmIybGJDczJoT1ciLCJkZXBvc3QiOjAsInJvbGUiOiJidXllciIsIl9fdiI6MCwiaWF0IjoxNjQ4NTY4OTkwfQ.tXeNu_vdZk9fs8LW5cab1se7tBpNIYd33Zd_YVbExHE
+Content-Type: application/json
+
+{
+    "username" : "noja"
+}
+
+### delete user
+DELETE  http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzM2Q1ZDczYjA3MTlhYWRmZmY5NGMiLCJ1c2VybmFtZSI6InNlcmxlcmxsZXIiLCJwYXNzd29yZCI6IiQyYiQxMCQ0aXhmZmVFSVA3WWNiSUhBbnZtNzIuODBjQVhSN1Z6MkF4dWVndEZNc2Q4Q3haWjk3bnkzLiIsImRlcG9zdCI6MCwicm9sZSI6ImJ1eWVyIiwiX192IjowLCJpYXQiOjE2NDg1NzM4MDV9.cuT_bW2Xv5rIGqZxoeai2bttrdvoGkixtLXBS0U8wvI
+
+### buyer deposit
+PUT http://localhost:3000/deposit/50
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzN2E4YWM5NGI1YWJjMzRlNDY3ZDMiLCJ1c2VybmFtZSI6ImJ1eWVyZXJlciIsInBhc3N3b3JkIjoiJDJiJDEwJDUwU1Rzc3cyV1d1a2p4UmJiWGxVbk80UWdiaHFWc3QwR1QuR1Z5dFZwTHEwVmo1dDhsaXJTIiwiY3JlZGl0IjowLCJyb2xlIjoiYnV5ZXIiLCJfX3YiOjAsImlhdCI6MTY0ODU4OTQ2NH0.sGjSDcQeZBSDQXY1vOXXiMYWBCRzhF-jdu6RdSF_Vuw
+
+### buyer buy
+POST  http://localhost:3000/buy
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzN2E4YWM5NGI1YWJjMzRlNDY3ZDMiLCJ1c2VybmFtZSI6ImJ1eWVyZXJlciIsInBhc3N3b3JkIjoiJDJiJDEwJDUwU1Rzc3cyV1d1a2p4UmJiWGxVbk80UWdiaHFWc3QwR1QuR1Z5dFZwTHEwVmo1dDhsaXJTIiwiY3JlZGl0IjowLCJyb2xlIjoiYnV5ZXIiLCJfX3YiOjAsImlhdCI6MTY0ODU4OTQ2NH0.sGjSDcQeZBSDQXY1vOXXiMYWBCRzhF-jdu6RdSF_Vuw
+Content-Type: application/json
+
+{
+    "productId": "62437d67fc1a47a7020dfcd1",
+    "number": 2
+}
+
+### buyer reset
+PUT  http://localhost:3000/reset
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzN2E4YWM5NGI1YWJjMzRlNDY3ZDMiLCJ1c2VybmFtZSI6ImJ1eWVyZXJlciIsInBhc3N3b3JkIjoiJDJiJDEwJDUwU1Rzc3cyV1d1a2p4UmJiWGxVbk80UWdiaHFWc3QwR1QuR1Z5dFZwTHEwVmo1dDhsaXJTIiwiY3JlZGl0IjowLCJyb2xlIjoiYnV5ZXIiLCJfX3YiOjAsImlhdCI6MTY0ODU4OTQ2NH0.sGjSDcQeZBSDQXY1vOXXiMYWBCRzhF-jdu6RdSF_Vuw
+
+### add product
+POST  http://localhost:3000/product
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzN2QzNmZjMWE0N2E3MDIwZGZjY2QiLCJ1c2VybmFtZSI6InNlbGxlcmVyZXIiLCJwYXNzd29yZCI6IiQyYiQxMCR5dHp1SEJsUTRBZkdJa1FEbnBwbkp1L1NxVGJHbHQzYzFveHNnN1BRNktJcW05Ry5MekVwdSIsImNyZWRpdCI6MCwicm9sZSI6InNlbGxlciIsIl9fdiI6MCwiaWF0IjoxNjQ4NTkwMTQ4fQ.3XSf3vKG4adiCB_BAJELUpHa9_F9x7nt0OzmcGE1Gh4
+
+{
+    "cost": 15,
+    "productName": "x",
+    "amountAvailable": 4
+}
+
+### get product
+GET  http://localhost:3000/product/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+Content-Type: application/json
+
+### update product
+PUT  http://localhost:3000/product/62436afd99fdd16cb893588b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzM2UyZWY1MzJmMDFmMjJlYzEzOWMiLCJ1c2VybmFtZSI6InNlcmxlcmxsZXIiLCJwYXNzd29yZCI6IiQyYiQxMCRiTlEvQWdIWFJBUUFmRFdjR0pPV2sub2V2Y0RndDc5L0ZFZUozLzVCL2ZKRi5QSFRxaVgzVyIsImRlcG9zdCI6MCwicm9sZSI6InNlbGxlciIsIl9fdiI6MCwiaWF0IjoxNjQ4NTc0MDA3fQ.5q3g6jZGn85goSWoeW9RDNc1TfYoVYDjsOH9W3prDFw
+
+{
+    "productName": "t"
+}
