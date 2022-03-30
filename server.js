@@ -4,8 +4,8 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 
 const mongoose = require('mongoose')
-const Product = require("./Product")
-const User = require("./User")
+const Product = require("./schemas/Product")
+const User = require("./schemas/User")
 mongoose.connect("mongodb://localhost:27017/vending_machine")
 
 const app = express()
